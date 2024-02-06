@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8PA-ot-D4B">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Plan-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MyPlanViewController" customModule="YogaAppFitness22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0x-s8-0C0">
+                                <rect key="frame" x="0.0" y="768" width="393" height="1"/>
+                                <color key="backgroundColor" red="0.3292801321408344" green="0.3292801321408344" blue="0.3292801321408344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="WyN-yw-oIV"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chapter1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="4vL-dr-yw0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="768"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-Fl-81A">
+                                <rect key="frame" x="0.0" y="311" width="393" height="270"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="DFz-aG-P3z"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OhW-hL-H8M">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BtG-XF-zlO">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="czY-w4-0XH">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4vL-dr-yw0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Zf-gs-hOo"/>
+                            <constraint firstItem="4vL-dr-yw0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="82h-JH-X8F"/>
+                            <constraint firstItem="kVV-Fl-81A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A6N-AA-Dnl"/>
+                            <constraint firstItem="f0x-s8-0C0" firstAttribute="top" secondItem="4vL-dr-yw0" secondAttribute="bottom" id="MgE-pv-IYW"/>
+                            <constraint firstItem="kVV-Fl-81A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ThP-vp-y4B"/>
+                            <constraint firstItem="f0x-s8-0C0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VFk-M0-div"/>
+                            <constraint firstItem="4vL-dr-yw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cTM-HG-8ru"/>
+                            <constraint firstItem="f0x-s8-0C0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eAf-yB-wHQ"/>
+                            <constraint firstItem="kVV-Fl-81A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="ehp-Sv-oAu"/>
+                            <constraint firstAttribute="trailing" secondItem="f0x-s8-0C0" secondAttribute="trailing" id="hwA-bj-xF0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Plan" image="tab_bar_myplan_unselected" selectedImage="tab_bar_myplan_selected" id="vjG-TV-AHs">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1028.2442748091603" y="704.92957746478874"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="oRZ-FK-4vy">
+            <objects>
+                <viewController id="Jbn-I1-8BI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFc-bO-BZD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vPs-2V-d4k"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Library" image="tab_bar_library_unselected" selectedImage="tab_bar_library_selected" id="fi9-wr-drL">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDp-zY-utz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="696"/>
+        </scene>
+        <!--Milestones-->
+        <scene sceneID="TDN-RZ-1jJ">
+            <objects>
+                <viewController id="Qay-eA-h45" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BjA-il-QQa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZP7-DQ-vOm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Milestones" image="tab_bar_achievements_unselected" selectedImage="tab_bar_achievements_selected" id="KOF-wa-shn">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pa-5P-Kmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="705"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="8s3-X2-cjz">
+            <objects>
+                <viewController id="zHB-n7-onV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSV-gB-is0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HZy-yL-HKX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="tab_bar_more_unselected" selectedImage="tab_bar_more_selected" id="QUE-kj-RGK">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0t-Wz-3q9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="705"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aNh-c8-v3I">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8PA-ot-D4B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdS-EI-ntD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.88202962863076595" green="0.88202962863076595" blue="0.88202962863076595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemGray3Color"/>
+                        <color key="barTintColor" systemColor="systemBrownColor"/>
+                        <color key="selectedImageTintColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="X4T-az-o04"/>
+                        <segue destination="Jbn-I1-8BI" kind="relationship" relationship="viewControllers" id="er6-c0-8kC"/>
+                        <segue destination="Qay-eA-h45" kind="relationship" relationship="viewControllers" id="wSi-gt-aRx"/>
+                        <segue destination="zHB-n7-onV" kind="relationship" relationship="viewControllers" id="ZRj-XP-PzB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GDy-5Y-RWv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chapter1_bg" width="458" height="812"/>
+        <image name="tab_bar_achievements_selected" width="44" height="44"/>
+        <image name="tab_bar_achievements_unselected" width="44" height="44"/>
+        <image name="tab_bar_library_selected" width="44" height="44"/>
+        <image name="tab_bar_library_unselected" width="44" height="44"/>
+        <image name="tab_bar_more_selected" width="44" height="44"/>
+        <image name="tab_bar_more_unselected" width="44" height="44"/>
+        <image name="tab_bar_myplan_selected" width="44" height="44"/>
+        <image name="tab_bar_myplan_unselected" width="44" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
