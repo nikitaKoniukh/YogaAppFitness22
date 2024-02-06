@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		CA3F0BCC2B7282F6000F3485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BCB2B7282F6000F3485 /* AppDelegate.swift */; };
 		CA3F0BCE2B7282F6000F3485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BCD2B7282F6000F3485 /* SceneDelegate.swift */; };
-		CA3F0BD02B7282F6000F3485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BCF2B7282F6000F3485 /* ViewController.swift */; };
+		CA3F0BD02B7282F6000F3485 /* MyPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BCF2B7282F6000F3485 /* MyPlanViewController.swift */; };
 		CA3F0BD32B7282F6000F3485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3F0BD12B7282F6000F3485 /* Main.storyboard */; };
 		CA3F0BD52B728307000F3485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3F0BD42B728307000F3485 /* Assets.xcassets */; };
 		CA3F0BD82B728307000F3485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3F0BD62B728307000F3485 /* LaunchScreen.storyboard */; };
+		CA3F0BE12B728476000F3485 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3F0BE02B728476000F3485 /* sessions.json */; };
+		CA3F0BE52B728B95000F3485 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BE42B728B95000F3485 /* Session.swift */; };
+		CA3F0BE72B728CCB000F3485 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BE62B728CCB000F3485 /* Sessions.swift */; };
+		CA3F0BEE2B729115000F3485 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BED2B729115000F3485 /* APIService.swift */; };
+		CA3F0BF12B72930F000F3485 /* MyPlanViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BF02B72930F000F3485 /* MyPlanViewControllerViewModel.swift */; };
+		CA3F0BF72B7299A9000F3485 /* SessionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BF52B7299A9000F3485 /* SessionCollectionViewCell.swift */; };
+		CA3F0BF82B7299A9000F3485 /* SessionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3F0BF62B7299A9000F3485 /* SessionCollectionViewCell.xib */; };
+		CA3F0BFD2B72B5A8000F3485 /* SessionCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BFC2B72B5A8000F3485 /* SessionCollectionViewCellViewModel.swift */; };
+		CA3F0BFF2B72BADE000F3485 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F0BFE2B72BADE000F3485 /* UserDefaultsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA3F0BC82B7282F6000F3485 /* YogaAppFitness22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YogaAppFitness22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3F0BCB2B7282F6000F3485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA3F0BCD2B7282F6000F3485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA3F0BCF2B7282F6000F3485 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA3F0BCF2B7282F6000F3485 /* MyPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewController.swift; sourceTree = "<group>"; };
 		CA3F0BD22B7282F6000F3485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA3F0BD42B728307000F3485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA3F0BD72B728307000F3485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA3F0BD92B728307000F3485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3F0BE02B728476000F3485 /* sessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
+		CA3F0BE42B728B95000F3485 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CA3F0BE62B728CCB000F3485 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
+		CA3F0BED2B729115000F3485 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CA3F0BF02B72930F000F3485 /* MyPlanViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanViewControllerViewModel.swift; sourceTree = "<group>"; };
+		CA3F0BF52B7299A9000F3485 /* SessionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA3F0BF62B7299A9000F3485 /* SessionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionCollectionViewCell.xib; sourceTree = "<group>"; };
+		CA3F0BF92B72AD06000F3485 /* Kohinoor-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kohinoor-Book.otf"; sourceTree = "<group>"; };
+		CA3F0BFA2B72AD06000F3485 /* Kohinoor-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kohinoor-Medium.otf"; sourceTree = "<group>"; };
+		CA3F0BFC2B72B5A8000F3485 /* SessionCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		CA3F0BFE2B72BADE000F3485 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,90 @@
 		CA3F0BCA2B7282F6000F3485 /* YogaAppFitness22 */ = {
 			isa = PBXGroup;
 			children = (
-				CA3F0BCB2B7282F6000F3485 /* AppDelegate.swift */,
-				CA3F0BCD2B7282F6000F3485 /* SceneDelegate.swift */,
-				CA3F0BCF2B7282F6000F3485 /* ViewController.swift */,
-				CA3F0BD12B7282F6000F3485 /* Main.storyboard */,
-				CA3F0BD42B728307000F3485 /* Assets.xcassets */,
-				CA3F0BD62B728307000F3485 /* LaunchScreen.storyboard */,
+				CA3F0BF22B729958000F3485 /* View */,
+				CA3F0BEF2B7292F8000F3485 /* ViewModel */,
+				CA3F0BEC2B7290FE000F3485 /* Servise */,
+				CA3F0BE22B728B58000F3485 /* Model */,
+				CA3F0BDF2B728384000F3485 /*  Resources */,
 				CA3F0BD92B728307000F3485 /* Info.plist */,
 			);
 			path = YogaAppFitness22;
+			sourceTree = "<group>";
+		};
+		CA3F0BDF2B728384000F3485 /*  Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BFB2B72AD25000F3485 /* fonts */,
+				CA3F0BE02B728476000F3485 /* sessions.json */,
+				CA3F0BCB2B7282F6000F3485 /* AppDelegate.swift */,
+				CA3F0BCD2B7282F6000F3485 /* SceneDelegate.swift */,
+				CA3F0BD42B728307000F3485 /* Assets.xcassets */,
+				CA3F0BD62B728307000F3485 /* LaunchScreen.storyboard */,
+			);
+			path = " Resources";
+			sourceTree = "<group>";
+		};
+		CA3F0BE22B728B58000F3485 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BE42B728B95000F3485 /* Session.swift */,
+				CA3F0BE62B728CCB000F3485 /* Sessions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA3F0BEC2B7290FE000F3485 /* Servise */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BED2B729115000F3485 /* APIService.swift */,
+				CA3F0BFE2B72BADE000F3485 /* UserDefaultsService.swift */,
+			);
+			path = Servise;
+			sourceTree = "<group>";
+		};
+		CA3F0BEF2B7292F8000F3485 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BF02B72930F000F3485 /* MyPlanViewControllerViewModel.swift */,
+				CA3F0BFC2B72B5A8000F3485 /* SessionCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA3F0BF22B729958000F3485 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BF42B72998B000F3485 /* Cells */,
+				CA3F0BF32B729966000F3485 /* ViewControllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA3F0BF32B729966000F3485 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BCF2B7282F6000F3485 /* MyPlanViewController.swift */,
+				CA3F0BD12B7282F6000F3485 /* Main.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA3F0BF42B72998B000F3485 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BF52B7299A9000F3485 /* SessionCollectionViewCell.swift */,
+				CA3F0BF62B7299A9000F3485 /* SessionCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CA3F0BFB2B72AD25000F3485 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA3F0BF92B72AD06000F3485 /* Kohinoor-Book.otf */,
+				CA3F0BFA2B72AD06000F3485 /* Kohinoor-Medium.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +220,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3F0BE12B728476000F3485 /* sessions.json in Resources */,
 				CA3F0BD82B728307000F3485 /* LaunchScreen.storyboard in Resources */,
 				CA3F0BD52B728307000F3485 /* Assets.xcassets in Resources */,
+				CA3F0BF82B7299A9000F3485 /* SessionCollectionViewCell.xib in Resources */,
 				CA3F0BD32B7282F6000F3485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +235,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA3F0BD02B7282F6000F3485 /* ViewController.swift in Sources */,
+				CA3F0BE52B728B95000F3485 /* Session.swift in Sources */,
+				CA3F0BE72B728CCB000F3485 /* Sessions.swift in Sources */,
+				CA3F0BFF2B72BADE000F3485 /* UserDefaultsService.swift in Sources */,
+				CA3F0BD02B7282F6000F3485 /* MyPlanViewController.swift in Sources */,
 				CA3F0BCC2B7282F6000F3485 /* AppDelegate.swift in Sources */,
+				CA3F0BEE2B729115000F3485 /* APIService.swift in Sources */,
+				CA3F0BF72B7299A9000F3485 /* SessionCollectionViewCell.swift in Sources */,
 				CA3F0BCE2B7282F6000F3485 /* SceneDelegate.swift in Sources */,
+				CA3F0BFD2B72B5A8000F3485 /* SessionCollectionViewCellViewModel.swift in Sources */,
+				CA3F0BF12B72930F000F3485 /* MyPlanViewControllerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

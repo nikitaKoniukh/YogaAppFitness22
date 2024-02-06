@@ -5,9 +5,16 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kohinoor-Book.otf">
+            <string>Kohinoor-Book</string>
+        </array>
+        <array key="Kohinoor-Medium.otf">
+            <string>Kohinoor-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--My Plan-->
         <scene sceneID="tne-QT-ifu">
@@ -24,8 +31,9 @@
                                     <constraint firstAttribute="height" constant="1" id="WyN-yw-oIV"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chapter1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="4vL-dr-yw0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chapter1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="4vL-dr-yw0">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-Fl-81A">
                                 <rect key="frame" x="0.0" y="311" width="393" height="270"/>
@@ -33,42 +41,89 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="DFz-aG-P3z"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OhW-hL-H8M">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OhW-hL-H8M">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BtG-XF-zlO">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="czY-w4-0XH">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-I4-HLD">
+                                <rect key="frame" x="20" y="109" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2hg-pN-G10"/>
+                                    <constraint firstAttribute="width" constant="40" id="OT4-QD-0LL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plan_info"/>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4X-td-fHd"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tSE-uU-9MF">
+                                <rect key="frame" x="121.66666666666669" y="114" width="150" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PLAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-6O-Cev">
+                                        <rect key="frame" x="37.333333333333329" y="0.0" width="75" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="UJg-Pm-nbI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Kohinoor-Medium" family="Kohinoor" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-z3-1YI">
+                                        <rect key="frame" x="37.333333333333329" y="22" width="75" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="TDX-r8-pc9"/>
+                                            <constraint firstAttribute="height" constant="1" id="afT-15-nkH"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAPTER 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuG-nf-gmb">
+                                        <rect key="frame" x="44.333333333333329" y="28" width="61" height="13"/>
+                                        <fontDescription key="fontDescription" name="Kohinoor-Book" family="Kohinoor" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posture Optimization" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-eJ-SWA">
+                                        <rect key="frame" x="0.0" y="46" width="150" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="1QB-Fx-sJn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Kohinoor-Medium" family="Kohinoor" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4vL-dr-yw0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Zf-gs-hOo"/>
-                            <constraint firstItem="4vL-dr-yw0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="82h-JH-X8F"/>
                             <constraint firstItem="kVV-Fl-81A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A6N-AA-Dnl"/>
-                            <constraint firstItem="f0x-s8-0C0" firstAttribute="top" secondItem="4vL-dr-yw0" secondAttribute="bottom" id="MgE-pv-IYW"/>
+                            <constraint firstItem="tSE-uU-9MF" firstAttribute="centerY" secondItem="EJr-I4-HLD" secondAttribute="centerY" constant="25" id="HTf-RF-daK"/>
                             <constraint firstItem="kVV-Fl-81A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ThP-vp-y4B"/>
                             <constraint firstItem="f0x-s8-0C0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VFk-M0-div"/>
-                            <constraint firstItem="4vL-dr-yw0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cTM-HG-8ru"/>
                             <constraint firstItem="f0x-s8-0C0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eAf-yB-wHQ"/>
                             <constraint firstItem="kVV-Fl-81A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="ehp-Sv-oAu"/>
+                            <constraint firstItem="EJr-I4-HLD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ei9-gp-M1O"/>
                             <constraint firstAttribute="trailing" secondItem="f0x-s8-0C0" secondAttribute="trailing" id="hwA-bj-xF0"/>
+                            <constraint firstItem="EJr-I4-HLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kb6-pg-tmD"/>
+                            <constraint firstItem="tSE-uU-9MF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oiM-If-Xeh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Plan" image="tab_bar_myplan_unselected" selectedImage="tab_bar_myplan_selected" id="vjG-TV-AHs">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="4vL-dr-yw0" id="wCF-Jf-Dq3"/>
+                        <outlet property="chapterNameLabel" destination="uo1-eJ-SWA" id="mSq-I0-6HN"/>
+                        <outlet property="chapterNumberLabel" destination="CuG-nf-gmb" id="jBY-UV-y2Q"/>
+                        <outlet property="infoButton" destination="EJr-I4-HLD" id="tfe-Xw-dw1"/>
+                        <outlet property="sessionsCollectionView" destination="kVV-Fl-81A" id="EJQ-oA-rFI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +216,7 @@
     </scenes>
     <resources>
         <image name="chapter1_bg" width="458" height="812"/>
+        <image name="plan_info" width="29" height="29"/>
         <image name="tab_bar_achievements_selected" width="44" height="44"/>
         <image name="tab_bar_achievements_unselected" width="44" height="44"/>
         <image name="tab_bar_library_selected" width="44" height="44"/>
