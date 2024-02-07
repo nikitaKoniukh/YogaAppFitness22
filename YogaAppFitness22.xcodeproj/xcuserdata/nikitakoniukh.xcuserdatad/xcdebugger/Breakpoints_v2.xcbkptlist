@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E16852B8-BB7A-4443-9393-8D3BC3ECDB4F"
+            uuid = "ED9BCDD7-E6B1-4F54-B154-7F182F0F0415"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YogaAppFitness22/Servise/UserDefaultsService.swift"
+            filePath = "YogaAppFitness22/View/ViewControllers/MyPlanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getCurrentSessionIndex()"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -107,21 +107,11 @@ class MyPlanViewController: UIViewController {
     }
     
     private func scrollToNextSession() {
-        if let currentSessionIndex = viewModel?.currentSessionIndex,
-           let count = viewModel?.sessions.count {
-            
-            
-            var indexPathToScroll: IndexPath
-            if count > currentSessionIndex {
-                indexPathToScroll = IndexPath(item: currentSessionIndex, section: 0)
-            } else {
-                indexPathToScroll = IndexPath(item: currentSessionIndex - 1, section: 0)
+        if let currentSessionIndex = viewModel?.currentSessionIndex {
+            let indexPathToScroll = IndexPath(item: currentSessionIndex, section: 0)
+            DispatchQueue.main.async { [weak self] in
+                self?.sessionsCollectionView.scrollToItem(at: indexPathToScroll, at: .centeredHorizontally, animated: true)
             }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.53, execute: {
-                self.sessionsCollectionView.scrollToItem(at: indexPathToScroll, at: .centeredHorizontally, animated: true)
-                
-            })
         }
     }
 }

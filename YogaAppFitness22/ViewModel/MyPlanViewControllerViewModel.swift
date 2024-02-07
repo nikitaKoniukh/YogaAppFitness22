@@ -26,7 +26,12 @@ final class MyPlanViewControllerViewModel {
     }
     
     var currentSessionIndex: Int {
-        return UserDefaultsService.shared.getCurrentSessionIndex()
+        let savedIndex = UserDefaultsService.shared.getCurrentSessionIndex()
+        if sessions.count > savedIndex {
+            return savedIndex
+        } else {
+            return savedIndex - 1
+        }
     }
     
     var chapterText: String? {
