@@ -55,7 +55,7 @@ class MyPlanViewController: UIViewController {
         collectionViewLayout.itemSize = CGSize(width: collectionViewLayout.collectionView!.frame.size.width - inset * 2, height: collectionViewLayout.collectionView!.frame.size.height)
     }
     
-    private func indexOfMajorCell() -> Int {
+    private var indexOfMajorCell: Int {
         guard let sessions = viewModel?.sessions else {
             return 0
         }
@@ -64,6 +64,16 @@ class MyPlanViewController: UIViewController {
         let index = Int(round(proportionalOffset))
         let safeIndex = max(0, min(sessions.count - 1, index))
         return safeIndex
+    }
+    
+    private var indexOfMajorCellAfterScroll: Int? {
+        let visibleRect = CGRect(origin: sessionsCollectionView.contentOffset, size: sessionsCollectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        guard let visibleIndexPath = sessionsCollectionView.indexPathForItem(at: visiblePoint) else {
+            return 0
+        }
+        
+        return visibleIndexPath.item
     }
     
     private func setupCollectionView() {
@@ -84,8 +94,9 @@ class MyPlanViewController: UIViewController {
     }
     
     private func setupLabels() {
-        chapterNameLabel.text = viewModel?.chapterText
+        chapterNumberLabel.text = viewModel?.chapterText
         chapterNameLabel.text = viewModel?.chapterNameText
+        backgroundImageView.image = viewModel?.backroundImageName
     }
     
     @IBAction func infoButtonPressed(_ sender: UIButton) {
@@ -117,6 +128,10 @@ class MyPlanViewController: UIViewController {
 }
 
 extension MyPlanViewController: MyPlanViewControllerViewModelDelegate {
+    func changeBackgroundUI() {
+        setupLabels()
+    }
+    
     func fetechedSuccessfully() {
         setupLabels()
         sessionsCollectionView.reloadData()
@@ -148,7 +163,7 @@ extension MyPlanViewController: UICollectionViewDataSource {
 extension MyPlanViewController: UICollectionViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        indexOfCellBeforeDragging = indexOfMajorCell()
+        indexOfCellBeforeDragging = indexOfMajorCell
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -158,7 +173,7 @@ extension MyPlanViewController: UICollectionViewDelegate {
         }
         
         targetContentOffset.pointee = scrollView.contentOffset
-        let indexOfMajorCell = self.indexOfMajorCell()
+        let indexOfMajorCell = self.indexOfMajorCell
         
         let swipeVelocityThreshold: CGFloat = 0.5
         let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < sessions.count && velocity.x > swipeVelocityThreshold
@@ -177,13 +192,19 @@ extension MyPlanViewController: UICollectionViewDelegate {
             }, completion: nil)
             
             // TODO: Change chapter label amd backgroun image
+            viewModel?.indexOfMajorCell = indexOfMajorCellAfterScroll
+            print("NIKITOS visibleVideoCell \(indexOfMajorCellAfterScroll)")
             
         } else {
             // TODO: Change chapter label amd backgroun image
+            viewModel?.indexOfMajorCell = indexOfMajorCell
+            print("NIKITOS \(indexOfMajorCell)")
             let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
             collectionViewLayout.collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
+    
+   
 }
 
 
