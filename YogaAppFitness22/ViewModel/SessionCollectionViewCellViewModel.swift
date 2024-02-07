@@ -58,7 +58,7 @@ final class SessionCollectionViewCellViewModel {
             return
         }
         
-        UserDefaultsService.shared.saveCurrentSession(index)
+        UserDefaultsService.shared.saveCurrentSession(index + 1)
     }
     
 }

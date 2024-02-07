@@ -26,7 +26,7 @@ final class MyPlanViewControllerViewModel {
     }
     
     var currentSessionIndex: Int {
-        return UserDefaultsService.shared.getCurrentSessionIndex() + 1
+        return UserDefaultsService.shared.getCurrentSessionIndex()
     }
     
     var chapterText: String? {

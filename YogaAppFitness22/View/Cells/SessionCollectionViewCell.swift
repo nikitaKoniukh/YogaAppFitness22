@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SessionCollectionViewCellDelegate: AnyObject {
+    func startButtonPressed(message: String)
+}
+
 class SessionCollectionViewCell: UICollectionViewCell {
 
     static let cellId = "SessionCollectionViewCell"
@@ -20,6 +24,7 @@ class SessionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var quoteAuthorLabel: UILabel!
     
     var viewModel: SessionCollectionViewCellViewModel?
+    weak var delegate: SessionCollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,5 +57,7 @@ class SessionCollectionViewCell: UICollectionViewCell {
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
         viewModel?.saveCurrentSession()
+        let message = "You've saved \((viewModel?.index ?? 0) + 1) session"
+        delegate?.startButtonPressed(message: message)
     }
 }

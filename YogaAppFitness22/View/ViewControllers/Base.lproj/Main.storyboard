@@ -121,6 +121,7 @@
                         <outlet property="backgroundImageView" destination="4vL-dr-yw0" id="wCF-Jf-Dq3"/>
                         <outlet property="chapterNameLabel" destination="uo1-eJ-SWA" id="mSq-I0-6HN"/>
                         <outlet property="chapterNumberLabel" destination="CuG-nf-gmb" id="jBY-UV-y2Q"/>
+                        <outlet property="collectionViewLayout" destination="OhW-hL-H8M" id="djL-hp-0Po"/>
                         <outlet property="infoButton" destination="EJr-I4-HLD" id="tfe-Xw-dw1"/>
                         <outlet property="sessionsCollectionView" destination="kVV-Fl-81A" id="EJQ-oA-rFI"/>
                     </connections>
